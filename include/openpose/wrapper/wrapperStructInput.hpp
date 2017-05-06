@@ -3,6 +3,7 @@
 
 #include <memory>
 #include "../producer/producer.hpp"
+#include "../config.hpp"
 
 namespace op
 {
@@ -10,7 +11,7 @@ namespace op
      * WrapperStructInput: Input (images, video, webcam, etc.) configuration struct.
      * WrapperStructInput allows the user to set up the input frames generator.
      */
-    struct WrapperStructInput
+	OPENPOSE_API struct WrapperStructInput
     {
         /**
          * Producer which will generate the frames.
@@ -56,7 +57,7 @@ namespace op
          * It has the recommended and default values we recommend for each element of the struct.
          * Since all the elements of the struct are public, they can also be manually filled.
          */
-        WrapperStructInput(const std::shared_ptr<Producer> producerSharedPtr = nullptr, const unsigned long long frameFirst = 0,
+		OPENPOSE_API WrapperStructInput(const std::shared_ptr<Producer> producerSharedPtr = nullptr, const unsigned long long frameFirst = 0,
                            const unsigned long long frameLast = -1, const bool realTimeProcessing = false, const bool frameFlip = false,
                            const int frameRotate = 0, const bool framesRepeat = false);
     };

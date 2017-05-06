@@ -8,7 +8,7 @@
 
 namespace op
 {
-    class PoseJsonSaver : public FileSaver
+    class OPENPOSE_API PoseJsonSaver : public FileSaver
     {
     public:
         explicit PoseJsonSaver(const std::string& directoryPath);

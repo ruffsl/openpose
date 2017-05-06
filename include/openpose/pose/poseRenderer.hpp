@@ -11,7 +11,7 @@
 
 namespace op
 {
-    class PoseRenderer : public Renderer
+    class OPENPOSE_API PoseRenderer : public Renderer
     {
     public:
         explicit PoseRenderer(const cv::Size& heatMapsSize, const cv::Size& outputSize, const PoseModel poseModel, const std::shared_ptr<PoseExtractor>& poseExtractor,

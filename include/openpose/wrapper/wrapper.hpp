@@ -1063,7 +1063,7 @@ namespace op
         }
     }
 
-    extern template class Wrapper<DATUM_BASE_NO_PTR>;
+    extern template class OPENPOSE_API Wrapper<DATUM_BASE_NO_PTR>;
 }
 
 #endif // OPENPOSE__WRAPPER__WRAPPER_HPP

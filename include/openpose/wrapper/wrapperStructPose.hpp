@@ -5,6 +5,7 @@
 #include "../core/enumClasses.hpp"
 #include "../pose/enumClasses.hpp"
 #include "../pose/poseParameters.hpp"
+#include "../config.hpp"
 
 namespace op
 {
@@ -122,7 +123,7 @@ namespace op
          * It has the recommended and default values we recommend for each element of the struct.
          * Since all the elements of the struct are public, they can also be manually filled.
          */
-        WrapperStructPose(const cv::Size& netInputSize = cv::Size{656, 368}, const cv::Size& outputSize = cv::Size{1280, 720},
+		OPENPOSE_API WrapperStructPose(const cv::Size& netInputSize = cv::Size{656, 368}, const cv::Size& outputSize = cv::Size{1280, 720},
                           const ScaleMode poseScaleMode = ScaleMode::InputResolution, const int gpuNumber = 1, const int gpuNumberStart = 0,
                           const int scalesNumber = 1, const float scaleGap = 0.15f, const bool renderOutput = false,
                           const PoseModel poseModel = PoseModel::COCO_18, const bool blendOriginalFrame = true,

@@ -3,6 +3,7 @@
 
 #include <string>
 #include "../filestream/enumClasses.hpp"
+#include "../config.hpp"
 
 namespace op
 {
@@ -93,7 +94,7 @@ namespace op
          * It has the recommended and default values we recommend for each element of the struct.
          * Since all the elements of the struct are public, they can also be manually filled.
          */
-        WrapperStructOutput(const bool displayGui = false, const bool guiVerbose = false, const bool fullScreen = false, const std::string& writePose = "",
+		OPENPOSE_API WrapperStructOutput(const bool displayGui = false, const bool guiVerbose = false, const bool fullScreen = false, const std::string& writePose = "",
                             const DataFormat writePoseDataFormat = DataFormat::Xml, const std::string& writePoseJson = "", const std::string& writeCocoJson = "",
                             const std::string& writeImages = "", const std::string& writeImagesFormat = "", const std::string& writeVideo = "",
                             const std::string& writeHeatMaps = "", const std::string& writeHeatMapsFormat = "");

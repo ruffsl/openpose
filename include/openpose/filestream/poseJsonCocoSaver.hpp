@@ -11,7 +11,7 @@ namespace op
     /**
      *  The PoseJsonCocoSaver class creates a COCO validation json file with details about the processed images. It inherits from Recorder.
      */
-    class PoseJsonCocoSaver
+    class OPENPOSE_API  PoseJsonCocoSaver
     {
     public:
         /**

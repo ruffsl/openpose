@@ -11,7 +11,7 @@
 
 namespace op
 {
-    class Gui
+    class OPENPOSE_API Gui
     {
     public:
         Gui(const bool fullScreen, const cv::Size& outputSize, const std::shared_ptr<std::atomic<bool>>& isRunningSharedPtr,

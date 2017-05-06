@@ -10,7 +10,7 @@ namespace op
 {
     namespace experimental
     {
-        class FaceRenderer : public Renderer
+        class OPENPOSE_API  FaceRenderer : public Renderer
         {
         public:
             explicit FaceRenderer(const cv::Size& frameSize);

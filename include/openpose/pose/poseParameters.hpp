@@ -5,6 +5,7 @@
 #include <map>
 #include <vector>
 #include "enumClasses.hpp"
+#include "openpose/config.hpp"
 
 namespace op
 {
@@ -89,8 +90,8 @@ namespace op
     const auto POSE_DEFAULT_ALPHA_HEATMAP = 0.7f;
 
     // Auxiliary functions
-    unsigned char poseBodyPartMapStringToKey(const PoseModel poseModel, const std::string& string);
-    unsigned char poseBodyPartMapStringToKey(const PoseModel poseModel, const std::vector<std::string>& strings);
+	OPENPOSE_API unsigned char poseBodyPartMapStringToKey(const PoseModel poseModel, const std::string& string);
+	OPENPOSE_API unsigned char poseBodyPartMapStringToKey(const PoseModel poseModel, const std::vector<std::string>& strings);
 }
 
 #endif // OPENPOSE__POSE__POSE_PARAMETERS_HPP

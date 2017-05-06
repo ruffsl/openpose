@@ -10,24 +10,24 @@
 
 namespace op
 {
-    DataFormat stringToDataFormat(const std::string& dataFormat);
+	OPENPOSE_API DataFormat stringToDataFormat(const std::string& dataFormat);
 
     // Save/load json, xml, yaml, yml
-    void saveData(const std::vector<cv::Mat>& cvMats, const std::vector<std::string>& cvMatNames, const std::string& fileNameNoExtension, const DataFormat format);
+	OPENPOSE_API void saveData(const std::vector<cv::Mat>& cvMats, const std::vector<std::string>& cvMatNames, const std::string& fileNameNoExtension, const DataFormat format);
 
-    void saveData(const cv::Mat& cvMat, const std::string cvMatName, const std::string& fileNameNoExtension, const DataFormat format);
+	OPENPOSE_API void saveData(const cv::Mat& cvMat, const std::string cvMatName, const std::string& fileNameNoExtension, const DataFormat format);
 
-    std::vector<cv::Mat> loadData(const std::vector<std::string>& cvMatNames, const std::string& fileNameNoExtension, const DataFormat format);
+	OPENPOSE_API std::vector<cv::Mat> loadData(const std::vector<std::string>& cvMatNames, const std::string& fileNameNoExtension, const DataFormat format);
 
-    cv::Mat loadData(const std::string& cvMatName, const std::string& fileNameNoExtension, const DataFormat format);
+	OPENPOSE_API cv::Mat loadData(const std::string& cvMatName, const std::string& fileNameNoExtension, const DataFormat format);
 
     // Json - Saving as *.json not available in OpenCV verions < 3.0, this function is a quick fix
-    void savePoseJson(const Array<float>& pose, const std::string& fileName, const bool humanReadable);
+	OPENPOSE_API void savePoseJson(const Array<float>& pose, const std::string& fileName, const bool humanReadable);
 
     // Save/load image
-    void saveImage(const cv::Mat& cvMat, const std::string& fullFilePath, const std::vector<int>& openCvCompressionParams = {CV_IMWRITE_JPEG_QUALITY, 100, CV_IMWRITE_PNG_COMPRESSION, 9});
+	OPENPOSE_API void saveImage(const cv::Mat& cvMat, const std::string& fullFilePath, const std::vector<int>& openCvCompressionParams = {CV_IMWRITE_JPEG_QUALITY, 100, CV_IMWRITE_PNG_COMPRESSION, 9});
 
-    cv::Mat loadImage(const std::string& fullFilePath, const int openCvFlags = CV_LOAD_IMAGE_ANYDEPTH);
+	OPENPOSE_API cv::Mat loadImage(const std::string& fullFilePath, const int openCvFlags = CV_LOAD_IMAGE_ANYDEPTH);
 }
 
 #endif // OPENPOSE__FILESTREAM__FILE_STREAM_HPP

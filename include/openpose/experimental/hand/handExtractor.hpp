@@ -17,7 +17,7 @@ namespace op
 {
     namespace experimental
     {
-        class HandExtractor
+        class OPENPOSE_API  HandExtractor
         {
         public:
             explicit HandExtractor(const std::string& modelFolder, const int gpuId, const PoseModel poseModel);

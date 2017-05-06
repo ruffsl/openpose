@@ -17,7 +17,7 @@
 
 namespace op
 {
-    class Profiler
+    class OPENPOSE_API Profiler
     {
     public:
         static const std::string timerInit(const int line, const std::string& function, const std::string& file);

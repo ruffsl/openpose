@@ -6,7 +6,7 @@
 
 namespace op
 {
-    class OpOutputToCvMat
+    class OPENPOSE_API OpOutputToCvMat
     {
     public:
         explicit OpOutputToCvMat(const cv::Size& outputResolution);

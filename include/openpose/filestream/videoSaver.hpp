@@ -8,7 +8,7 @@
 
 namespace op
 {
-    class VideoSaver
+    class OPENPOSE_API VideoSaver
     {
     public:
         VideoSaver(const std::string& videoSaverPath, const int cvFourcc, const double fps, const cv::Size& cvSize);

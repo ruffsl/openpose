@@ -1,12 +1,14 @@
 #ifndef OPENPOSE__THREAD__ENUM_CLASSES_HPP
 #define OPENPOSE__THREAD__ENUM_CLASSES_HPP
 
+#include "../config.hpp"
+
 namespace op
 {
     /**
      * ThreadManager synchronization mode.
      */
-    enum class ThreadManagerMode : unsigned char
+    OPENPOSE_API enum class ThreadManagerMode : unsigned char
     {
         /**
          * First and last queues of ThreadManager will be given to the user, so he must push elements to the first queue and retrieve

@@ -1,6 +1,8 @@
 #ifndef OPENPOSE__WRAPPER__WRAPPER_STRUCT_HAND_HPP
 #define OPENPOSE__WRAPPER__WRAPPER_STRUCT_HAND_HPP
 
+#include "../config.hpp"
+
 namespace op
 {
     namespace experimental
@@ -11,7 +13,7 @@ namespace op
          * WrapperStructHand allows the user to set up the hands estimation and rendering parameters that will be used for the OpenPose Wrapper
          * class.
          */
-        struct WrapperStructHand
+		struct WrapperStructHand
         {
             /**
              * PROVISIONAL PARAMETER. IT WILL BE CHANGED.
@@ -24,7 +26,7 @@ namespace op
              * It has the recommended and default values we recommend for each element of the struct.
              * Since all the elements of the struct are public, they can also be manually filled.
              */
-            WrapperStructHand(const bool extractAndRenderHands = false);
+			OPENPOSE_API WrapperStructHand(const bool extractAndRenderHands = false);
         };
     }
 }

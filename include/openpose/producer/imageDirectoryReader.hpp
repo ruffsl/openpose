@@ -12,7 +12,7 @@ namespace op
      * cv::VideoCapture class, so it can be used quite similarly to the cv::VideoCapture class. Thus,
      * it is quite similar to VideoReader and WebcamReader.
      */
-    class ImageDirectoryReader : public Producer
+    class OPENPOSE_API ImageDirectoryReader : public Producer
     {
     public:
         /**

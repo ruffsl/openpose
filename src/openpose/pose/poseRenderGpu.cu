@@ -6,6 +6,10 @@
 #include "openpose/utilities/render.hu"
 #include "openpose/pose/poseRenderGpu.hpp"
 
+#ifndef M_PI
+	#define M_PI 3.14159265358979323846
+#endif
+
 namespace op
 {
     __constant__ const unsigned char COCO_PAIRS_GPU[] = POSE_COCO_PAIRS_TO_RENDER;

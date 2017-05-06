@@ -12,7 +12,7 @@
 
 namespace op
 {
-    class PoseExtractor
+    class OPENPOSE_API PoseExtractor
     {
     public:
         PoseExtractor(const cv::Size& netOutputSize, const cv::Size& outputSize, const PoseModel poseModel, const std::vector<HeatMapType>& heatMapTypes = {},

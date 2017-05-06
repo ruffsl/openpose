@@ -16,7 +16,7 @@
 
 namespace op
 {
-    class PoseExtractorCaffe : public PoseExtractor
+    class OPENPOSE_API  PoseExtractorCaffe : public PoseExtractor
     {
     public:
         PoseExtractorCaffe(const cv::Size& netInputSize, const cv::Size& netOutputSize, const cv::Size& outputSize, const int scaleNumber,

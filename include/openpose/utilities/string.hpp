@@ -2,6 +2,7 @@
 #define OPENPOSE__UTILITIES__STRING_HPP
 
 #include <string>
+#include "../config.hpp"
 
 namespace op
 {
@@ -13,7 +14,7 @@ namespace op
      * @return std::string with the formatted value.
      */
     template<typename T>
-    std::string toFixedLengthString(const T number, const unsigned long long stringLength = 0);
+	OPENPOSE_API std::string toFixedLengthString(const T number, const unsigned long long stringLength = 0);
 }
 
 #endif // OPENPOSE__UTILITIES__STRING_HPP

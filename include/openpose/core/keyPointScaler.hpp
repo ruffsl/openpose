@@ -7,7 +7,7 @@
 
 namespace op
 {
-    class KeyPointScaler
+    class OPENPOSE_API KeyPointScaler
     {
     public:
         explicit KeyPointScaler(const ScaleMode scaleMode);

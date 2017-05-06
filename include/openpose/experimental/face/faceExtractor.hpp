@@ -12,12 +12,13 @@
 #include "../../core/resizeAndMergeCaffe.hpp"
 #include "../../pose/enumClasses.hpp"
 #include "enumClasses.hpp"
+#include "caffe/blob.hpp"
 
 namespace op
 {
     namespace experimental
     {
-        class FaceExtractor
+        class OPENPOSE_API FaceExtractor
         {
         public:
             explicit FaceExtractor(const std::string& modelFolder, const int gpuId, const PoseModel poseModel);

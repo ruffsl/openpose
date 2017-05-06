@@ -11,7 +11,7 @@
 
 namespace op
 {
-    class NetCaffe : public Net
+    class OPENPOSE_API NetCaffe : public Net
     {
     public:
         NetCaffe(const std::array<int, 4>& netInputSize4D, const std::string& caffeProto, const std::string& caffeTrainedModel, const int gpuId = 0,

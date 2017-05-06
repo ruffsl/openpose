@@ -10,7 +10,7 @@ namespace op
 {
     namespace experimental
     {
-        class HandRenderer : public Renderer
+        class OPENPOSE_API  HandRenderer : public Renderer
         {
         public:
             explicit HandRenderer(const cv::Size& frameSize);

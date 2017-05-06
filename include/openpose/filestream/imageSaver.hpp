@@ -8,7 +8,7 @@
 
 namespace op
 {
-    class ImageSaver : public FileSaver
+    class OPENPOSE_API ImageSaver : public FileSaver
     {
     public:
         ImageSaver(const std::string& directoryPath, const std::string& imageFormat);
