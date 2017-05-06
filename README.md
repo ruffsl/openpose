@@ -23,7 +23,7 @@ Library main functionality:
 
 * Image, video and webcam reader.
 
-* Able to save the results in various format(JSON, XML, PNG, JPG, ...).
+* Able to save and load the results in various formats (JSON, XML, PNG, JPG, ...).
 
 * Small display and GUI for simple result visualization.
 
@@ -162,6 +162,21 @@ Where each index is the key value corresponding with each body part on `POSE_COC
 
 #### Reading Saved Results
 We use standard formats (JSON, XML, PNG, JPG, ...) to save our results, so there will be lots of frameworks to read them later, but you might also directly use our functions on [include/openpose/filestream.hpp](include/openpose/filestream.hpp). In particular, `loadData` (for JSON, XML and YML files) and `loadImage` (for image formats such as PNG or JPG) to load the data into cv::Mat format.
+
+
+
+## Custom Caffe
+We only modified some Caffe compilation flags and minor details. You can use use your own Caffe distribution, these are the files we added and modified:
+
+1. Added files: `install_caffe.sh`; as well as `Makefile.config.Ubuntu14.example`, `Makefile.config.Ubuntu16.example`, `Makefile.config.Ubuntu14_cuda_7.example` and `Makefile.config.Ubuntu16_cuda_7.example` (extracted from `Makefile.config.example`). Basically, you must enable cuDNN.
+2. Edited file: Makefile. Search for "# OpenPose: " to find the edited code. We basically added the C++11 flag to avoid issues in some old computers.
+3. Optional - deleted Caffe file: `Makefile.config.example`.
+4. Finally, run `make all && make distribute` in your Caffe version and modify the Caffe directory variable in our Makefile config file: `./Makefile.config.UbuntuX.example` (where X is 14 or 16 depending on your Ubuntu version), set the `CAFFE_DIR` parameter to the path where both the `include` and `lib` Caffe folders are located.
+
+
+
+## OpenPose Benchmark
+Initial library running time benchmark on [OpenPose Benchmark](https://docs.google.com/spreadsheets/d/1-DynFGvoScvfWDA1P4jDInCkbD4lg0IKOYbXgEq0sK0/edit#gid=0). You can comment in that document with your graphics card model and running time per time for that model, and we will add your results to the benchmark!
 
 
 

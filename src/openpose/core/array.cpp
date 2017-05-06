@@ -1,4 +1,5 @@
 #include <typeinfo> // typeid
+#include <numeric> // std::accumulate
 #include "openpose/utilities/errorAndLog.hpp"
 #include "openpose/core/array.hpp"
 
@@ -344,8 +345,8 @@ namespace op
     {
         try
         {
-            int index = 0;
-            int accumulated = 1;
+            auto index = 0;
+            auto accumulated = 1;
             for (auto i = 0 ; i < indexes.size() ; i++)
             {
                 index += accumulated * indexes[i];
