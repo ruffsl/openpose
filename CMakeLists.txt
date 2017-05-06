@@ -79,7 +79,7 @@ include_directories(${PROJECT_BINARY_DIR})
 
 
 # ---[ CAFFE 
-find_package(CAFFE REQUIRED)
+find_package(Caffe REQUIRED)
 list(APPEND OpenPose_INCLUDE_DIRS PUBLIC ${CAFFE_INCLUDE_DIRS})
 list(APPEND OpenPose_LINKER_LIBS PUBLIC ${CAFFE_LIBRARIES})
 
@@ -140,4 +140,3 @@ list(APPEND CUDA_NVCC_FLAGS ${Caffe_ALL_DEFINITIONS})
 
 add_subdirectory(src/openpose)
 add_subdirectory(examples)
-
