@@ -7,13 +7,15 @@
 #include "../utilities/macros.hpp"
 #include "enumClasses.hpp"
 
+#include <array>
+
 namespace op
 {
     /**
      * Producer is an abstract class to extract frames from a source (image directory, video file,
      * webcam stream, etc.). It has the basic and common functions (e.g. getFrame, release & isOpened).
      */
-    class Producer
+    class OPENPOSE_API Producer
     {
     public:
         /**

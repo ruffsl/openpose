@@ -5,9 +5,12 @@
 #include <vector>
 #include "../core/datum.hpp"
 
+#include "../config.hpp"
+
+
 #define DATUM_BASE_NO_PTR std::vector<Datum>
 #define DATUM_BASE std::shared_ptr<DATUM_BASE_NO_PTR>
-#define DEFINE_TEMPLATE_DATUM(templateName) template class templateName<DATUM_BASE>
+#define DEFINE_TEMPLATE_DATUM(templateName) template class OPENPOSE_API templateName<DATUM_BASE>
 #define COMPILE_TEMPLATE_DATUM(templateName) extern DEFINE_TEMPLATE_DATUM(templateName)
 
 #define UNUSED(unusedVariable) (void)(unusedVariable)

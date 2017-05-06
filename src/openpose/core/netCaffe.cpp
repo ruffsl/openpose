@@ -3,6 +3,10 @@
 #include "openpose/utilities/errorAndLog.hpp"
 #include "openpose/core/netCaffe.hpp"
 
+#ifdef _WIN32
+#include <numeric>
+#endif
+
 namespace op
 {
     NetCaffe::NetCaffe(const std::array<int, 4>& netInputSize4D, const std::string& caffeProto, const std::string& caffeTrainedModel, const int gpuId, const std::string& lastBlobName) :

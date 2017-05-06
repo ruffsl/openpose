@@ -127,6 +127,14 @@ namespace op
         }
     }
 
+#if _WIN32
+	#ifdef _WINDLL
+		#ifdef CAFE_API
+			#undef CAFE_API
+		#endif
+		#define CAFE_API __declspec(dllexport)
+	#endif 
+#endif
     INSTANTIATE_CLASS(NmsCaffe);
 }
 

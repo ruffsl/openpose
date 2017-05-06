@@ -13,7 +13,7 @@ namespace op
     // It mostly follows the Caffe::layer implementation, so Caffe users can easily use it. However, in order to keep the compatibility with any generic Caffe version,
     // we keep this 'layer' inside our library rather than in the Caffe code.
     template <typename T>
-    class BodyPartConnectorCaffe
+    class OPENPOSE_API  BodyPartConnectorCaffe
     {
     public:
         explicit BodyPartConnectorCaffe();

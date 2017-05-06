@@ -6,6 +6,10 @@
 #include "openpose/utilities/errorAndLog.hpp"
 #include "openpose/gui/gui.hpp"
 
+#ifdef _WIN32
+#include <locale>
+#endif
+
 namespace op
 {
     inline void showGuiHelp()
@@ -36,8 +40,13 @@ namespace op
             const int key = cv::waitKey(1);
             if (key != -1)
             {
+#ifdef _WIN32
                 // Some OpenCV versions has a problem and key must be casted to char
-                const auto castedKey = std::tolower((char)key);
+				std::locale loc;
+                const auto castedKey = std::tolower((char)key, loc);
+#else
+				const auto castedKey = std::tolower((char)key);
+#endif
                 // ------------------------- General Commands ------------------------- //
                 // Exit program
                 if (castedKey==27)

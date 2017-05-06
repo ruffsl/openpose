@@ -7,7 +7,7 @@
 
 namespace op
 {
-    class GuiInfoAdder
+    class OPENPOSE_API GuiInfoAdder
     {
     public:
         GuiInfoAdder(const cv::Size& outputSize, const int numberGpus);

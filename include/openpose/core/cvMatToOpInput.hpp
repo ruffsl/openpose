@@ -7,7 +7,7 @@
 
 namespace op
 {
-    class CvMatToOpInput
+    class OPENPOSE_API CvMatToOpInput
     {
     public:
         CvMatToOpInput(const cv::Size& netInputResolution, const int scaleNumber = 1, const float scaleGap = 0.25);

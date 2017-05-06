@@ -5,6 +5,8 @@
 #include <opencv2/core/core.hpp>
 #include <boost/shared_ptr.hpp> // Note: std::shared_ptr not (fully) supported for array pointers: http://stackoverflow.com/questions/8947579/
 
+#include "openpose/config.hpp"
+
 namespace op
 {
     /**
@@ -16,7 +18,7 @@ namespace op
      * Hence, it keeps high performance while adding high-level functions.
      */
     template<typename T>
-    class Array
+    class OPENPOSE_API Array
     {
     public:
         // -------------------------------------------------- Constructors and Data Allocator Functions -------------------------------------------------- //

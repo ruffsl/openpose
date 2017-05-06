@@ -1,6 +1,8 @@
 #ifndef OPENPOSE__WRAPPER__WRAPPER_STRUCT_FACE_HPP
 #define OPENPOSE__WRAPPER__WRAPPER_STRUCT_FACE_HPP
 
+#include "../config.hpp"
+
 namespace op
 {
     namespace experimental
@@ -11,7 +13,7 @@ namespace op
          * WrapperStructFace allows the user to set up the face estimation and rendering parameters that will be used for the OpenPose Wrapper
          * class.
          */
-        struct WrapperStructFace
+		struct WrapperStructFace
         {
             /**
              * PROVISIONAL PARAMETER. IT WILL BE CHANGED.
@@ -24,7 +26,7 @@ namespace op
              * It has the recommended and default values we recommend for each element of the struct.
              * Since all the elements of the struct are public, they can also be manually filled.
              */
-            WrapperStructFace(const bool extractAndRenderFace = false);
+			OPENPOSE_API WrapperStructFace(const bool extractAndRenderFace = false);
         };
     }
 }

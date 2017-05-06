@@ -6,7 +6,7 @@
 
 namespace op
 {
-    class FileSaver
+    class OPENPOSE_API  FileSaver
     {
     protected:
         explicit FileSaver(const std::string& directoryPath);

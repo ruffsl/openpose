@@ -8,7 +8,7 @@
 
 namespace op
 {
-    class HeatMapSaver : public FileSaver
+    class OPENPOSE_API  HeatMapSaver : public FileSaver
     {
     public:
         HeatMapSaver(const std::string& directoryPath, const std::string& imageFormat);

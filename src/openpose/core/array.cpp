@@ -2,6 +2,10 @@
 #include "openpose/utilities/errorAndLog.hpp"
 #include "openpose/core/array.hpp"
 
+#ifdef _WIN32
+#include <numeric>
+#endif
+
 namespace op
 {
     template<typename T>

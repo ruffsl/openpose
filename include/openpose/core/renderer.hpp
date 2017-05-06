@@ -6,7 +6,7 @@
 
 namespace op
 {
-    class Renderer
+    class OPENPOSE_API Renderer
     {
     public:
         explicit Renderer(const unsigned long long volume);

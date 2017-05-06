@@ -5,12 +5,14 @@
 #include <opencv2/core/core.hpp>
 #include "enumClasses.hpp"
 
+#include "../config.hpp"
+
 namespace op
 {
     /**
      *  The FrameDisplayer class is the one presenting visually the processed frame to the user.
      */
-    class FrameDisplayer
+    class OPENPOSE_API FrameDisplayer
     {
     public:
         /**

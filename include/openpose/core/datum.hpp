@@ -12,7 +12,7 @@ namespace op
      * Datum is one the main OpenPose classes/structs. The workers and threads share by default a std::shared_ptr<std::vector<Datum>>. It contains
      * all the parameters that the different workers and threads need to exchange.
      */
-    struct Datum
+	struct Datum
     {
         // -------------------------------------------------- ID parameters -------------------------------------------------- //
         unsigned long long id; /**< Datum ID. Internally used to sort the Datums if multi-threading is used. */
@@ -108,7 +108,7 @@ namespace op
          * Use clone() for a slower but real copy, similarly to cv::Mat and Array<T>.
          * @param datum Datum to be copied.
          */
-        Datum(const Datum& datum);
+		OPENPOSE_API Datum(const Datum& datum);
 
         /**
          * Copy assignment.
@@ -116,14 +116,14 @@ namespace op
          * @param datum Datum to be copied.
          * @return The resulting Datum.
          */
-        Datum& operator=(const Datum& datum);
+		OPENPOSE_API Datum& operator=(const Datum& datum);
 
         /**
          * Move constructor.
          * It destroys the original Datum to be moved.
          * @param datum Datum to be moved.
          */
-        Datum(Datum&& datum);
+		OPENPOSE_API Datum(Datum&& datum);
 
         /**
          * Move assignment.
@@ -131,13 +131,13 @@ namespace op
          * @param datum Datum to be moved.
          * @return The resulting Datum.
          */
-        Datum& operator=(Datum&& datum);
+		OPENPOSE_API Datum& operator=(Datum&& datum);
 
         /**
          * Destructor class.
          * Declared virtual so that Datum can be inherited.
          */
-        virtual ~Datum();
+		OPENPOSE_API virtual ~Datum();
 
         /**
          * Clone function.
@@ -145,7 +145,7 @@ namespace op
          * It performs a real but slow copy of the data, i.e., even if the copied element is modified, the original one is not.
          * @return The resulting Datum.
          */
-        Datum clone() const;
+		OPENPOSE_API Datum clone() const;
 
 
 

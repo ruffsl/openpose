@@ -6,6 +6,10 @@
 #include "openpose/utilities/render.hu"
 #include "openpose/pose/poseRenderGpu.hpp"
 
+#ifndef M_PI
+	#define M_PI 3.14159265358979323846
+#endif
+
 namespace op
 {
     const auto THREADS_PER_BLOCK_1D = 32u;

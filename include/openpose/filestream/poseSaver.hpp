@@ -7,7 +7,7 @@
 
 namespace op
 {
-    class PoseSaver : public FileSaver
+    class OPENPOSE_API PoseSaver : public FileSaver
     {
     public:
         PoseSaver(const std::string& directoryPath, const DataFormat format);

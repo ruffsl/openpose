@@ -7,7 +7,7 @@
 
 namespace op
 {
-    const auto THREADS_PER_BLOCK_1D = 32;
+    const auto THREADS_PER_BLOCK_1D = 32u;
 
     __constant__ const unsigned char PART_PAIRS_GPU[] = FACE_PAIRS_TO_RENDER;
     __constant__ const float RGB_COLORS[] = {

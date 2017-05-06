@@ -7,7 +7,7 @@
 
 namespace op
 {
-    class JsonOfstream
+    class OPENPOSE_API  JsonOfstream
     {
     public:
         explicit JsonOfstream(const std::string& filePath, const bool humanReadable = true);
